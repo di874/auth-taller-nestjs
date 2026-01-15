@@ -49,49 +49,49 @@ El servidor correrá en **http://localhost:3001**
 
 ---
 
-## 📚 Documentación del Proceso
+## 📚 Documentación Visual
 
 ### Paso 1: Configuración Inicial
-![Paso 1](./images/imagen1.png)
+![Paso 1](./images/1.png)
 
 ### Paso 2: Crear el Proyecto NestJS
-![Paso 2](./images/imagen2.png)
+![Paso 2](./images/2.png)
 
 ### Paso 3: Instalar Dependencias
-![Paso 3](./images/imagen3.png)
+![Paso 3](./images/3.png)
 
 ### Paso 4: Estructura del Proyecto
-![Paso 4](./images/imagen4.png)
+![Paso 4](./images/4.png)
 
 ### Paso 5: Entidad de Usuario
-![Paso 5](./images/imagen5.png)
+![Paso 5](./images/5.png)
 
 ### Paso 6: DTOs de Autenticación
-![Paso 6](./images/imagen6.png)
+![Paso 6](./images/6.png)
 
 ### Paso 7: AuthService
-![Paso 7](./images/imagen7.png)
+![Paso 7](./images/7.png)
 
 ### Paso 8: JwtStrategy
-![Paso 8](./images/imagen8.png)
+![Paso 8](./images/8.png)
 
 ### Paso 9: AuthController
-![Paso 9](./images/imagen9.png)
+![Paso 9](./images/9.png)
 
 ### Paso 10: Configurar Postman - Entorno
-![Paso 10](./images/imagen10.png)
+![Paso 10](./images/10.png)
 
 ### Paso 11: Postman - Request de Registro
-![Paso 11](./images/imagen11.png)
+![Paso 11](./images/11.png)
 
 ### Paso 12: Postman - Request de Login
-![Paso 12](./images/imagen12.png)
+![Paso 12](./images/12.png)
 
 ### Paso 13: Postman - Ruta Protegida
-![Paso 13](./images/imagen13.png)
+![Paso 13](./images/13.png)
 
 ### Paso 14: Verificación en JWT.io
-![Paso 14](./images/imagen14.png)
+![Paso 14](./images/14.png)
 
 ---
 
