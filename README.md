@@ -1,48 +1,325 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Auth Taller NestJS 🔐
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Proyecto de autenticación con JWT y Guards en NestJS para el taller de Desarrollo en Plataformas - PUCE.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+![NestJS](https://img.shields.io/badge/NestJS-v10-red?style=flat-square)
+![JWT](https://img.shields.io/badge/JWT-Authentication-blue?style=flat-square)
+![Node](https://img.shields.io/badge/Node.js-v18+-green?style=flat-square)
 
-## Description
+---
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 🎯 Características
 
-## Project setup
+- ✅ Registro de usuarios con contraseñas hasheadas (bcrypt)
+- ✅ Login con generación de tokens JWT
+- ✅ Rutas protegidas con Guards
+- ✅ Validación de datos con class-validator
+- ✅ Autenticación Bearer Token
+- ✅ Pruebas completas en Postman
 
-```bash
-$ npm install
-```
+---
 
-## Compile and run the project
+## 📋 Requisitos
+
+- Node.js v18+
+- npm o yarn
+- Postman (para pruebas)
+- Git
+
+---
+
+## 🚀 Instalación
 
 ```bash
-# development
-$ npm run start
+# Clonar el repositorio
+git clone https://github.com/di874/auth-taller-nestjs.git
+cd auth-taller
 
-# watch mode
-$ npm run start:dev
+# Instalar dependencias
+npm install
 
-# production mode
-$ npm run start:prod
+# Compilar el proyecto
+npm run build
+
+# Iniciar el servidor
+npm run start
 ```
+
+El servidor correrá en **http://localhost:3001**
+
+---
+
+## 📚 Documentación del Proceso
+
+### Paso 1: Configuración Inicial
+![Paso 1](./images/imagen1.png)
+
+### Paso 2: Crear el Proyecto NestJS
+![Paso 2](./images/imagen2.png)
+
+### Paso 3: Instalar Dependencias
+![Paso 3](./images/imagen3.png)
+
+### Paso 4: Estructura del Proyecto
+![Paso 4](./images/imagen4.png)
+
+### Paso 5: Entidad de Usuario
+![Paso 5](./images/imagen5.png)
+
+### Paso 6: DTOs de Autenticación
+![Paso 6](./images/imagen6.png)
+
+### Paso 7: AuthService
+![Paso 7](./images/imagen7.png)
+
+### Paso 8: JwtStrategy
+![Paso 8](./images/imagen8.png)
+
+### Paso 9: AuthController
+![Paso 9](./images/imagen9.png)
+
+### Paso 10: Configurar Postman - Entorno
+![Paso 10](./images/imagen10.png)
+
+### Paso 11: Postman - Request de Registro
+![Paso 11](./images/imagen11.png)
+
+### Paso 12: Postman - Request de Login
+![Paso 12](./images/imagen12.png)
+
+### Paso 13: Postman - Ruta Protegida
+![Paso 13](./images/imagen13.png)
+
+### Paso 14: Verificación en JWT.io
+![Paso 14](./images/imagen14.png)
+
+---
+
+## 🧪 Pruebas con Postman
+
+### Endpoints Disponibles
+
+| # | Método | URL | Descripción |
+|---|--------|-----|-----------|
+| 1 | POST | `/auth/register` | Registro de nuevo usuario |
+| 2 | POST | `/auth/login` | Inicio de sesión |
+| 3 | GET | `/auth/profile` | Obtener perfil (protegido) |
+| 4 | GET | `/auth/protected` | Ruta protegida ejemplo |
+| 5 | GET | `/users` | Listar todos los usuarios |
+
+### Flujo de Autenticación
+
+1. **Registrarse**: POST `/auth/register`
+   - Body: `{ nombre, email, password }`
+   - Respuesta: Usuario creado
+
+2. **Login**: POST `/auth/login`
+   - Body: `{ email, password }`
+   - Respuesta: `access_token` (JWT)
+
+3. **Acceder a ruta protegida**: GET `/auth/profile`
+   - Header: `Authorization: Bearer <token>`
+   - Respuesta: Datos del usuario autenticado
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
+auth-taller/
+├── src/
+│   ├── auth/
+│   │   ├── dto/
+│   │   │   ├── register.dto.ts       # Validación de registro
+│   │   │   └── login.dto.ts          # Validación de login
+│   │   ├── guards/
+│   │   │   └── jwt-auth.guard.ts     # Protege rutas
+│   │   ├── strategies/
+│   │   │   └── jwt.strategy.ts       # Valida tokens JWT
+│   │   ├── auth.controller.ts        # Endpoints de auth
+│   │   ├── auth.service.ts           # Lógica de autenticación
+│   │   └── auth.module.ts            # Módulo de auth
+│   ├── users/
+│   │   ├── entities/
+│   │   │   └── user.entity.ts        # Modelo de usuario
+│   │   ├── users.controller.ts       # Endpoints de usuarios
+│   │   ├── users.service.ts          # Servicio de usuarios
+│   │   └── users.module.ts           # Módulo de usuarios
+│   ├── app.module.ts                 # Módulo raíz
+│   └── main.ts                       # Punto de entrada
+├── package.json
+├── tsconfig.json
+├── README.md
+└── images/                           # Documentación visual
+    ├── imagen1.png
+    ├── imagen2.png
+    └── ...
+```
+
+---
+
+## 🔐 Seguridad
+
+### Consideraciones Importantes:
+
+⚠️ **Desarrollo**: La clave JWT está hardcodeada por propósitos educativos.
+
+🔒 **Producción**: Usa variables de entorno (.env):
+```env
+JWT_SECRET=tu_clave_super_secreta_aqui
+JWT_EXPIRATION=24h
+PORT=3001
+```
+
+---
+
+## 🔑 Variables de Entorno (Producción)
+
+Crea un archivo `.env` en la raíz:
+
+```env
+# Base de datos
+DATABASE_URL=postgresql://user:password@localhost:5432/auth_db
+
+# JWT
+JWT_SECRET=tu_clave_muy_secreta
+JWT_EXPIRATION=24h
+
+# Servidor
+PORT=3001
+NODE_ENV=production
+```
+
+---
+
+## 📖 Conceptos Clave
+
+### ¿Qué es JWT?
+
+JWT (JSON Web Token) es un estándar para representar claims de forma segura entre dos partes.
+
+**Estructura**: `header.payload.signature`
+
+```
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoianVhbkB0ZXN0LmNvbSJ9.Sig...
+```
+
+### ¿Qué es un Guard?
+
+Un Guard es un middleware que verifica si un usuario tiene permiso para acceder a una ruta.
+
+```typescript
+@UseGuards(JwtAuthGuard)
+@Get('profile')
+getProfile(@Request() req) {
+  // Solo usuarios autenticados llegan aquí
+}
+```
+
+---
+
+## 📚 Dependencias Principales
+
+```json
+{
+  "@nestjs/common": "^10.0.0",
+  "@nestjs/core": "^10.0.0",
+  "@nestjs/jwt": "^11.0.0",
+  "@nestjs/passport": "^10.0.0",
+  "passport": "^0.7.0",
+  "passport-jwt": "^4.0.1",
+  "bcrypt": "^5.1.0",
+  "class-validator": "^0.14.0",
+  "class-transformer": "^0.5.1"
+}
+```
+
+---
+
+## 🧪 Pruebas Unitarias
+
+```bash
+# Ejecutar tests
+npm run test
+
+# Con coverage
+npm run test:cov
+```
+
+---
+
+## 🚀 Deploy
+
+### En Heroku:
+```bash
+heroku create auth-taller-nestjs
+git push heroku main
+```
+
+### En Vercel:
+```bash
+vercel --prod
+```
+
+---
+
+## 📝 Notas de Desarrollo
+
+- La base de datos está en memoria (array). Para producción, usar PostgreSQL o MongoDB.
+- Los tokens expiran en 24 horas.
+- Las contraseñas se hashean con bcrypt (10 rondas).
+
+---
+
+## 🤝 Contribuciones
+
+1. Fork el proyecto
+2. Crea una rama (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia MIT. Ver `LICENSE` para más detalles.
+
+---
+
+## 👨‍💻 Autor
+
+**di874** - [GitHub](https://github.com/di874)
+
+Proyecto para el taller de Desarrollo en Plataformas - PUCE
+
+---
+
+## 🔗 Enlaces Útiles
+
+- [NestJS Documentation](https://docs.nestjs.com)
+- [JWT.io - Debugger](https://jwt.io)
+- [Postman](https://www.postman.com)
+- [bcrypt npm](https://www.npmjs.com/package/bcrypt)
+
+---
+
+## ❓ FAQ
+
+### ¿Por qué me sale error 401?
+El token es inválido, expiró o no se envió. Verifica que incluyas `Authorization: Bearer <token>`
+
+### ¿Cómo cambio la contraseña?
+Actualmente no hay endpoint. Puedes agregarlo como reto adicional.
+
+### ¿Puedo conectar a una base de datos real?
+Sí, usa TypeORM con PostgreSQL o MongoDB.
+
+---
+
+**¡Gracias por usar este proyecto!** 🎉
+
+---
 
 ## Run tests
 
